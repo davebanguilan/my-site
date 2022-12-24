@@ -2,7 +2,7 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Dave Banguiln',
+    title: 'Dave Banguilan',
     description: 'Dave Banguilan - Hybrid Mobile Application Developer Expert',
     siteUrl: 'https://davebanguilan.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
