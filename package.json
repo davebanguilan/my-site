@@ -1,11 +1,11 @@
 {
-  "name": "v4",
-  "description": "Personal Website V4",
+  "name": "davebanguilan",
+  "description": "Personal Website based on v4 site of Brittany Chiang",
   "version": "1.0.0",
-  "author": "Brittany Chiang <brittany.chiang@gmail.com>",
+  "author": "Dave Banguilan <davebanguilan.tbd@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bchiang7/v4"
+    "url": "https://github.com/davebanguilan/my-site"
   },
   "keywords": [
     "gatsby"

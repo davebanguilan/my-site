@@ -73,9 +73,9 @@ const StyledTabButton = styled.button`
   width: 100%;
   height: var(--tab-height);
   padding: 0 20px 2px;
-  border-left: 2px solid var(--lightest-navy);
+  border-left: 2px solid var(--lightest-gray);
   background-color: transparent;
-  color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
+  color: ${({ isActive }) => (isActive ? 'var(--blue-magenta)' : 'var(--jet)')};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;
@@ -89,13 +89,13 @@ const StyledTabButton = styled.button`
     min-width: 120px;
     padding: 0 15px;
     border-left: 0;
-    border-bottom: 2px solid var(--lightest-navy);
+    border-bottom: 2px solid var(--lightest-gray);
     text-align: center;
   }
 
   &:hover,
   &:focus {
-    background-color: var(--light-navy);
+    background-color: var(--light-gray);
   }
 `;
 
@@ -107,7 +107,7 @@ const StyledHighlight = styled.div`
   width: 2px;
   height: var(--tab-height);
   border-radius: var(--border-radius);
-  background: var(--green);
+  background: var(--blue-magenta);
   transform: translateY(calc(${({ activeTabId }) => activeTabId} * var(--tab-height)));
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.1s;
@@ -141,6 +141,10 @@ const StyledTabPanel = styled.div`
   height: auto;
   padding: 10px 5px;
 
+  div {
+    margin-bottom: 15px;
+  }
+
   ul {
     ${({ theme }) => theme.mixins.fancyList};
   }
@@ -152,13 +156,13 @@ const StyledTabPanel = styled.div`
     line-height: 1.3;
 
     .company {
-      color: var(--green);
+      color: var(--blue-magenta);
     }
   }
 
   .range {
     margin-bottom: 25px;
-    color: var(--light-slate);
+    color: var(--light-jet);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
   }
@@ -174,13 +178,15 @@ const Jobs = () => {
         edges {
           node {
             frontmatter {
-              title
               company
               location
-              range
               url
+              repetitiveData {
+                title
+                range
+                jobDescription
+              }
             }
-            html
           }
         }
       }
@@ -261,7 +267,8 @@ const Jobs = () => {
                   role="tab"
                   tabIndex={activeTabId === i ? '0' : '-1'}
                   aria-selected={activeTabId === i ? true : false}
-                  aria-controls={`panel-${i}`}>
+                  aria-controls={`panel-${i}`}
+                >
                   <span>{company}</span>
                 </StyledTabButton>
               );
@@ -272,8 +279,8 @@ const Jobs = () => {
         <StyledTabPanels>
           {jobsData &&
             jobsData.map(({ node }, i) => {
-              const { frontmatter, html } = node;
-              const { title, url, company, range } = frontmatter;
+              const { frontmatter } = node;
+              const { url, company, repetitiveData } = frontmatter;
 
               return (
                 <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
@@ -283,20 +290,23 @@ const Jobs = () => {
                     tabIndex={activeTabId === i ? '0' : '-1'}
                     aria-labelledby={`tab-${i}`}
                     aria-hidden={activeTabId !== i}
-                    hidden={activeTabId !== i}>
-                    <h3>
-                      <span>{title}</span>
-                      <span className="company">
-                        &nbsp;@&nbsp;
-                        <a href={url} className="inline-link">
-                          {company}
-                        </a>
-                      </span>
-                    </h3>
-
-                    <p className="range">{range}</p>
-
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                    hidden={activeTabId !== i}
+                  >
+                    {repetitiveData.map((x, i) => (
+                      <React.Fragment key={`${company}-${i}`}>
+                        <h3>
+                          <span>{x.title}</span>
+                          <span className="company">
+                            &nbsp;@&nbsp;
+                            <a href={url} className="inline-link">
+                              {company}
+                            </a>
+                          </span>
+                        </h3>
+                        <p className="range">{x.range}</p>
+                        <div dangerouslySetInnerHTML={{ __html: x.jobDescription }} />
+                      </React.Fragment>
+                    ))}
                   </StyledTabPanel>
                 </CSSTransition>
               );

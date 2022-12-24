@@ -7,7 +7,6 @@ import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
-import { IconLogo } from '@components/icons';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -17,7 +16,7 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color: rgba(230, 230, 230, 0.7);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -38,8 +37,8 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: rgba(10, 25, 47, 0.85);
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
+        background-color: rgba(230, 230, 230, 0.7);
+        box-shadow: 0 10px 30px -10px var(--gray-shadow);
       `};
 
     ${props =>
@@ -48,7 +47,7 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
+        box-shadow: 0 10px 30px -10px var(--gray-shadow);
       `};
   }
 `;
@@ -57,7 +56,7 @@ const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: var(--lightest-slate);
+  color: var(--lightest-jet);
   font-family: var(--font-mono);
   counter-reset: item 0;
   z-index: 12;
@@ -65,15 +64,19 @@ const StyledNav = styled.nav`
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
 
+    font-size: 1rem;
+
+    h1 {
+      margin-bottom: 0;
+    }
+
     a {
-      color: var(--green);
-      width: 42px;
-      height: 42px;
+      color: var(--blue-magenta);
 
       &:hover,
       &:focus {
         svg {
-          fill: var(--green-tint);
+          fill: var(--blue-magenta-tint);
         }
       }
 
@@ -112,18 +115,12 @@ const StyledLinks = styled.div`
         &:before {
           content: '0' counter(item) '.';
           margin-right: 5px;
-          color: var(--green);
+          color: var(--blue-magenta);
           font-size: var(--fz-xxs);
           text-align: right;
         }
       }
     }
-  }
-
-  .resume-button {
-    ${({ theme }) => theme.mixins.smallButton};
-    margin-left: 15px;
-    font-size: var(--fz-xs);
   }
 `;
 
@@ -162,20 +159,14 @@ const Nav = ({ isHome }) => {
     <div className="logo" tabIndex="-1">
       {isHome ? (
         <a href="/" aria-label="home">
-          <IconLogo />
+          <h1>davebanguilan</h1>
         </a>
       ) : (
         <Link to="/" aria-label="home">
-          <IconLogo />
+          <h1>davebanguilan</h1>
         </Link>
       )}
     </div>
-  );
-
-  const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-      Resume
-    </a>
   );
 
   return (
@@ -194,7 +185,6 @@ const Nav = ({ isHome }) => {
                     </li>
                   ))}
               </ol>
-              <div>{ResumeLink}</div>
             </StyledLinks>
 
             <Menu />
@@ -223,16 +213,6 @@ const Nav = ({ isHome }) => {
                     ))}
                 </TransitionGroup>
               </ol>
-
-              <TransitionGroup component={null}>
-                {isMounted && (
-                  <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-                    <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-                      {ResumeLink}
-                    </div>
-                  </CSSTransition>
-                )}
-              </TransitionGroup>
             </StyledLinks>
 
             <TransitionGroup component={null}>

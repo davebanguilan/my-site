@@ -1,26 +1,22 @@
 module.exports = {
-  email: 'brittany.chiang@gmail.com',
+  email: 'davebanguilan.tbd@gmail.com',
 
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/bchiang7',
+      url: 'https://github.com/davebanguilan',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
+      url: 'https://www.instagram.com/davebanguilan',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
+      url: 'https://twitter.com/dvbngln',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
-    },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
+      url: 'https://ph.linkedin.com/in/davebanguilan',
     },
   ],
 
@@ -44,9 +40,9 @@ module.exports = {
   ],
 
   colors: {
-    green: '#64ffda',
-    navy: '#0a192f',
-    darkNavy: '#020c1b',
+    blueMagenta: '#3c32fa',
+    gray: '#E6E6E6',
+    white: '#FFFFFF',
   },
 
   srConfig: (delay = 200, viewFactor = 0.25) => ({

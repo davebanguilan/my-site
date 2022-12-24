@@ -14,12 +14,11 @@ const StyledLoader = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--dark-navy);
+  background-color: var(--white);
   z-index: 99;
 
   .logo-wrapper {
     width: max-content;
-    max-width: 100px;
     transition: var(--transition);
     opacity: ${props => (props.isMounted ? 1 : 0)};
     svg {
@@ -87,6 +86,7 @@ const Loader = ({ finishLoading }) => {
 
       <div className="logo-wrapper">
         <IconLoader />
+        {/* <h2>davebanguilan.</h2> */}
       </div>
     </StyledLoader>
   );
