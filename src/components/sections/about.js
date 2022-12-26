@@ -136,13 +136,13 @@ const About = () => {
           <div>
             <p>
               Hello! My name is Dave and I enjoy developing mobile applications for both iOS and
-              Android. I've started my passion in web way back 2012 and tinkered with hybrid
+              Android. I've started my passion in web way back 2012 and playing around with hybrid
               applications since 2020.
             </p>
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://www.you-source.com/">a software development company</a> and I am
+              <a href="https://www.you-source.com/">a local software development company</a> and I am
               currently working on hybrid mobile application at{' '}
               <a href="https://www.rs2.com/">a financial tech company</a>.
             </p>
