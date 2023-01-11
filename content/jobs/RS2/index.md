@@ -4,7 +4,7 @@ company: 'RS2'
 location: 'Bonifacio Global City, PH'
 url: 'https://www.RS2.com/'
 repetitiveData:
-  [{ title: ['Lead Mobile Application Developer'], range: ['June 2022 - Present'], jobDescription: '
+  [{ title: ['Mobile Application Developer'], range: ['June 2022 - Present'], jobDescription: '
         <ul>
           <li>Designed initial project UI/UX</li>
           <li>Migrated backend from Adobe ColdFusion to Spring Boot</li>
