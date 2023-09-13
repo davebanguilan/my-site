@@ -6,19 +6,24 @@ url: 'https://www.RS2.com/'
 repetitiveData:
   [{ title: ['Mobile Application Developer'], range: ['June 2022 - Present'], jobDescription: '
         <ul>
-          <li>Designed initial project UI/UX</li>
           <li>Migrated backend from Adobe ColdFusion to Spring Boot</li>
-          <li>Added new features based on client request</li>
-          <li>Ensured code quality and standard</li>
-          <li>Contributed to open-source Capacitor plugin that is used in the project</li>
+          <li>Upgraded and maintained mobile frontend framework (Ionic)</li>
+          <li>Worked with colleagues locally and abroad to implement new features (Some key implementations are: • Bills Payment, Transfer to other banks, QrPH, OTP, Branch Locator)</li>
+          <li>Ensured code quality and standard by using unit tests and frequently changing the code base to the latest standard (JUnit, Jasmine)</li>
+          <li>Created packages that are used in the backend project (Oracle, PL-SQL)</li>
+          <li>Tested application and fixed bugs on different platforms (iOS, Android)</li>
+          <li>Created documentation for the code and features of the application for both the front and backend (Postman, Confluence, Swagger) </li>
+          <li>Worked on R&D for the implementation of the KYC feature (AWS Rekognition, AWS Textract)</li>
         </ul>
         ' }]
 ---
 
-<!-- <li>Led the development of a mobile banking application</li>
-<li>Designed backend architecture and initial UI/UX of the project</li>
-<li>Ensured code quality and security based on PCI DSS Compliance</li>
-<li>Contributed to open-source plugin from Capacitor</li>
-<li>Guided and trained team members on the mobile application project</li>
-<li>Collaborated with clients both locally and abroad regarding on development and bug reports</li>
-<li>Managed automation tasks for integration and deployment</li> -->
+
+
+
+
+
+
+
+
+
