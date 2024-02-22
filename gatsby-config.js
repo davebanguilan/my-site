@@ -6,6 +6,7 @@ module.exports = {
     description: 'Dave Banguilan - Hybrid Mobile Application Developer Expert',
     siteUrl: 'https://davebanguilan.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@dvbngln'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
