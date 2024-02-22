@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Ionic', 'Angular', 'Capacitor', 'Spring Boot', 'Node.js', 'Elementor'];
+  const skills = ['Ionic', 'Angular', 'Capacitor', 'Spring Boot', 'Node.js', 'C#', 'Elementor', 'Azure Databricks', 'Python', 'Firebase', 'AWS'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -142,9 +142,11 @@ const About = () => {
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://www.you-source.com/">a local software development company</a> and I am
-              currently working on hybrid mobile application at{' '}
+              <a href="https://www.you-source.com/">a local software development company</a>
+              as a software engineer and a hybrid mobile application at{' '}
               <a href="https://www.rs2.com/">a financial tech company</a>.
+              I am currently working as a Sales IT Manager / Data Engineer at{' '}
+              <a href="https://ph.pg.com/">a huge FMCG</a>.
             </p>
 
             <p>
