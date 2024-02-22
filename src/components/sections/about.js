@@ -142,11 +142,14 @@ const About = () => {
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://www.you-source.com/">a local software development company</a>
+              <a href="https://www.you-source.com/">a local software development company</a>{' '}
               as a software engineer and a hybrid mobile application at{' '}
               <a href="https://www.rs2.com/">a financial tech company</a>.
+            </p>
+
+            <p>
               I am currently working as a Sales IT Manager / Data Engineer at{' '}
-              <a href="https://ph.pg.com/">a huge FMCG</a>.
+              <a href="https://ph.pg.com/">a huge FMCG company</a>.
             </p>
 
             <p>
