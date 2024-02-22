@@ -1,18 +1,10 @@
 module.exports = {
-  email: 'davebanguilan.tbd@gmail.com',
+  email: 'hey@davebanguilan.dev',
 
   socialMedia: [
     {
       name: 'GitHub',
       url: 'https://github.com/davebanguilan',
-    },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/davebanguilan',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/dvbngln',
     },
     {
       name: 'Linkedin',
